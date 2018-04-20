@@ -1,0 +1,58 @@
+html .first-bg, .block .block-title, .pagination ul .active a, button.button span, .button.btn-checkout, .iview-prevNav, a.iview-nextNav, .dl-menuwrapper button, .dl-menuwrapper .dl-menu, .i-tab li.active, .error-msg, .success-msg, .note-msg, .notice-msg, .product-view .tabs li.active,.sf-menu ul li:hover,.category-list h3 a{
+	background-color:#000;
+	border-bottom:4px solid #ED3BE3;
+}
+html .first-bg-hover:hover, .pagination ul a:hover,.category-list h3 a:hover,.category-list li:hover a {
+	background-color:#ED3BE3 !important;
+}
+html .first-color, .price, .btn-icon i, .price-box,.product-shop .btn-icon i {
+	color:#ED3BE3;
+}
+html .first-brd, .pagination ul .active a, .sf-menu li a:after {
+	border-color:#ED3BE3;
+}
+html .second-bg, .sf-menu ul {
+	background: #7d7e7d; /* Old browsers */
+background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+
+}html .thirdd-bg{background:#fff;}
+html .second-color {
+	color:#555555;
+}
+html .second-brd {
+	border-color:#555555;
+}
+html .third-bg {
+	background:#fff;
+}
+html .third-color {
+	color:#fff;
+}
+html .third-brd {
+	border-color:#fff;
+}
+html .fourth-bg, .cart-table .btn-update span, .opc .active .step-title {
+	background-color:#424242;
+}
+html .fourth-color {
+	color:#424242;
+}
+html .fourth-brd {
+	border-color:#424242;
+}
+html .fifth-bg, .cart .discount h2, .cart .shipping h2, .cart .totals th {
+	background-color:#212224;
+}
+html .fifth-color {
+	color:#212224;
+}
+html .fifth-brd {
+	border-color:#212224;
+}
+

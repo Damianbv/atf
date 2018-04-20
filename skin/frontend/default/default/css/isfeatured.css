@@ -1,0 +1,116 @@
+.featured{
+    border: 3px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+    min-height: 314px;
+    width: 605px
+
+
+}
+
+/*
+root element for the scrollable.  when scrolling occurs this
+element stays still.
+*/
+.scrollable {
+  /* required settings */
+  position:relative;
+  overflow:hidden;
+  width: 538px;
+  height:299px;
+  float:left;
+}
+ 
+/*
+root element for scrollable items. Must be absolutely positioned
+and it should have a extremely large width to accommodate scrollable
+items.  it's enough that you set width and height for the root element
+and not for this element.
+*/
+.scrollable .items {
+  /* this cannot be too large */
+  width:20000em;
+  position:absolute;
+}
+ 
+/*
+a single item. must be floated in horizontal scrolling.  typically,
+this element is the one that *you* will style the most.
+*/
+.items div {
+  float:left;
+}
+.productdiv{
+    width: 180px;
+    padding: 7px 0 0 3px;
+    text-align: center;
+}
+.productname{
+    
+    color: #203548;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 5px;
+  
+    
+}
+.productname a{
+    color: #646262;
+    font-family: Arial,Helvetica,sans-serif;
+    text-align: center;
+    
+}
+.price-con .price-box{
+  
+   margin: 0 0 5px;
+   width:100%;   
+}
+.fadd{
+   float:left; 
+   margin: 0 0 5px;
+   width:100%; 
+}
+.price-con .old-price{
+margin:0 !important;
+
+}
+.price-con .special-price{
+margin:0 !important;
+    
+}
+.larrow{
+
+padding:100px 0 0 3px;
+width:30px;
+cursor: pointer;
+
+}
+.rarrow{
+width:30px;
+padding: 112px 0 0;
+position: relative;
+cursor: pointer;
+}
+.ftitle{
+    margin: 0 0 9px;
+    padding: 0 0 0 28px;
+}
+.fhead{
+    background: none repeat scroll 0 0 #CCCCCC;
+    min-height: 27px;
+    padding: 5px 0 0 31px;
+
+}
+.fhead strong{
+    color: #203548;
+    display: block;
+    font: bold 12px/16px Arial,Helvetica,sans-serif;
+    min-height: 16px;
+    padding: 1px 0;
+    text-transform: uppercase;
+    
+}
+.show-msg{
+ font-size: 20px;
+    margin: 100px 0 0 -34px;
+    text-align: center;
+}
