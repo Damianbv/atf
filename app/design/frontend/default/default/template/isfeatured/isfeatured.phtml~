@@ -1,0 +1,30 @@
+<div><p>hi from template</p></div>
+
+	<?php 
+
+
+     
+      $_product = Mage::registry('current_product');
+     $attributes =  $_product->getAttributes();
+     echo $_product->getData('is_featred');
+
+      
+      
+     // print_r($products);
+        
+   
+          
+	$__manStock = $_product->getStockItem()->getManageStock();
+	$__invAmt = (int)Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty();
+        
+        
+	if ($__manStock > 0)
+		{
+		echo $this->__("Only $__invAmt Available in Stock");
+		}
+      
+    // echo $this->isVisible();
+     
+   
+    ?>
+     

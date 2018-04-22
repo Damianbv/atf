@@ -1,0 +1,30 @@
+<div><p>hi from template</p></div>
+
+	<?php 
+
+echo "mmmmmmmmmmmmmmmmmmmmmmmmmmm";
+die('pppppppppppp');
+
+     
+      $_product = Mage::registry('current_product');
+     // print_r($product);
+      
+      
+     // print_r($products);
+        
+   
+          
+	$__manStock = $_product->getStockItem()->getManageStock();
+	$__invAmt = (int)Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty();
+        
+        
+	if ($__manStock > 0)
+		{
+		echo $this->__("Only $__invAmt Available in Stock");
+		}
+      
+    // echo $this->isVisible();
+     
+   
+    ?>
+     

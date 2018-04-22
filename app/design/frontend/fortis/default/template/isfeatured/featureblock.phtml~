@@ -1,0 +1,83 @@
+<?php 
+      /*
+      * Featured product Extension Developed by Daffodil S/w Ltd. 
+      */
+?>
+<?php $collection = Mage::getModel('catalog/product');
+      $products = $collection->getCollection()
+           ->addAttributeToSelect('*')
+           ->addAttributeToFilter('is_featured',1)
+           ->load();
+        $prodIds = $products->getAllIds();
+        $ftotalproduct=count($prodIds);?>
+
+<?php  $enable=Mage::getStoreConfig('isfeatured/all_settings/enabled');
+       $title= Mage::getStoreConfig('isfeatured/all_settings/title');
+       $limit=Mage::getStoreConfig('isfeatured/all_settings/product_no');
+       ?>
+<?php if($enable): ?>
+<div class="featured">
+    <div class="fhead">
+    <strong> <span><?php echo $this->__($title);?></span></strong>
+    </div>
+    <span class="feature-left"> <a class="prev browse left"><img   class="larrow" alt="left" src="<?php echo $this->getSkinUrl('images/featured/left.png') ?>"/></a> </span>
+    <div class="scrollable" id="scrollable">
+            <div class="items">
+                <?php $i=1;?>
+                <?php $j=1;
+                      $k=1;?>
+                    <div class="box1">
+                        <?php $count=1; ?>
+                            <?php  foreach($prodIds as $productId) :?>
+                                <?php if($count<=$limit):?>
+                                          <?php  $k++; ?>
+                                           <?php  $_product =  Mage::getModel('catalog/product')->load($productId);?>
+                                          <div class="productdiv">
+                                          
+                                                    <a href="<?php echo $this->getUrl($_product->getUrlPath())?>" >
+                                                      <span>
+                                                           <img src="<? echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(170) ?>" width="170" height="170" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+                                                      </span></a>
+                                                      <span class="productname">
+                                                        <a href="<?php echo $this->getUrl($_product->getUrlPath())?>" >  <?php echo $_product->getName(); ?></a>                   
+                                                      </span>
+                                                
+                                                      <span class="price-con"><?php echo Mage_Catalog_Block_Product::getPriceHtml($_product, true) ?></span>
+                                                     
+                                                        <span class="fadd">
+                                                           <p><button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation(' <?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button></p>
+                                                      </span>
+                                             
+                                          </div>
+                                      <?php if($i%3==0 && $k<=$ftotalproduct):
+                                               $j++;?>
+                    </div>
+                    <div class="box<?php  $j; ?>"><?php endif;$i++;?>
+                                   
+                                        <?php endif; ?>
+                                        <?php $count++?>
+                               <?php endforeach; ?>
+                    
+                                
+                                            
+                   
+        </div>
+      </div>
+    </div>
+    <span class="feature-right"><a class="next browse right"><img class="rarrow" alt="right" src="<?php echo $this->getSkinUrl('images/featured/right.png') ?>"/> </a></span>
+ </div> 
+<?php endif;?>
+ <?php if($count<=limit && ($count%3)===0):
+     echo "<script>document.getElementById('div".$j."').style.display='none';</script>";
+ echo $count."".$limit;
+ endif;
+     ?>
+<?php if($count>limit && ($limit%3)===0){echo "<script>document.getElementById('div".$j."').style.display='none';</script>";echo $count."".$limit;}?>
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script type="text/javascript">
+jQuery.noConflict(); 
+jQuery(function($) {
+  // initialize scrollable
+  $(".scrollable").scrollable();
+});
+</script>
